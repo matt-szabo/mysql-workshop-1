@@ -1,0 +1,34 @@
+mysql> CREATE DATABASE decodemtl_test;
+Query OK, 1 row affected (0.01 sec)
+
+mysql> SHOW DATABASES;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| c9                 |
+| decodemtl_test     |
+| mysql              |
+| performance_schema |
+| phpmyadmin         |
++--------------------+
+6 rows in set (0.00 sec)
+
+mysql> CREATE DATABASE decodemtl_addressbook;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> SHOW DATABASES;
++-----------------------+
+| Database              |
++-----------------------+
+| information_schema    |
+| c9                    |
+| decodemtl_addressbook |
+| decodemtl_test        |
+| mysql                 |
+| performance_schema    |
+| phpmyadmin            |
++-----------------------+
+7 rows in set (0.01 sec)
+
+mysql> DROP DATABASE decodemtl_test;
