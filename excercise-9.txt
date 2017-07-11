@@ -31,3 +31,23 @@ mysql> DESCRIBE poultry_count;
 | chicks_no  | bigint(20) | YES  |     | NULL    |       |
 +------------+------------+------+-----+---------+-------+
 5 rows in set (0.01 sec)
+
+-- QUESTION 1
+
+mysql> SELECT SUM(rooster_no+hen_no+chicks_no) FROM poultry_count WHERE date='2017-07-07';           
++----------------------------------+
+| SUM(rooster_no+hen_no+chicks_no) |
++----------------------------------+
+|                               30 |
++----------------------------------+
+1 row in set (0.00 sec)
+
+"All chicks born withing the last "10" days from a SPECIFIC DATE are considered Chicks.
+
+mysql> SELECT sum(chicks_no) as total_chicks FROM poultry_count WHERE date BETWEEN DATE_ADD("2017-07-24", INTERVAL -9 DAY) and "2017-07-24";                   
++--------------+
+| total_chicks |
++--------------+
+|          100 |
++--------------+
+1 row in set (0.01 sec)
