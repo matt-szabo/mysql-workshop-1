@@ -1,0 +1,27 @@
+mysql> CREATE DATABASE Hotel
+    -> ;
+Query OK, 1 row affected (0.01 sec)
+
+mysql> USE hotel
+ERROR 1049 (42000): Unknown database 'hotel'
+mysql> USE Hotel
+Database changed
+mysql> CREATE TABLE roominfo (id INT, room_id INT, floor INT, date DATE, available BOOL, occupancy INT, unrentable ENUM('janitor_closet','public_laundry_room','gym','games_room','pool'),private_kitchen BOOL, windows INT,carpet BOOL);                                                                                                               
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> describe roominfo;
++-----------------+------------------------------------------------------------------------+------+-----+---------+-------+
+| Field           | Type                                                                   | Null | Key | Default | Extra |
++-----------------+------------------------------------------------------------------------+------+-----+---------+-------+
+| id              | int(11)                                                                | YES  |     | NULL    |       |
+| room_id         | int(11)                                                                | YES  |     | NULL    |       |
+| floor           | int(11)                                                                | YES  |     | NULL    |       |
+| date            | date                                                                   | YES  |     | NULL    |       |
+| available       | tinyint(1)                                                             | YES  |     | NULL    |       |
+| occupancy       | int(11)                                                                | YES  |     | NULL    |       |
+| unrentable      | enum('janitor_closet','public_laundry_room','gym','games_room','pool') | YES  |     | NULL    |       |
+| private_kitchen | tinyint(1)                                                             | YES  |     | NULL    |       |
+| windows         | int(11)                                                                | YES  |     | NULL    |       |
+| carpet          | tinyint(1)                                                             | YES  |     | NULL    |       |
++-----------------+------------------------------------------------------------------------+------+-----+---------+-------+
+10 rows in set (0.00 sec)

@@ -1,0 +1,33 @@
+mysql> CREATE DATABASE BarnWithChickens;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> SHOW DATABASES;
++-----------------------+
+| Database              |
++-----------------------+
+| information_schema    |
+| BarnWithChickens      |
+| c9                    |
+| decodemtl_addressbook |
+| mysql                 |
+| performance_schema    |
+| phpmyadmin            |
++-----------------------+
+7 rows in set (0.00 sec)
+
+mysql> USE BarnWithChickens;
+Database changed
+mysql> CREATE TABLE poultry_count (id INT, date DATE, rooster_no BIGINT,hen_no BIGINT, chicks_no BIGINT);
+Query OK, 0 rows affected (0.04 sec)
+
+mysql> DESCRIBE poultry_count;
++------------+------------+------+-----+---------+-------+
+| Field      | Type       | Null | Key | Default | Extra |
++------------+------------+------+-----+---------+-------+
+| id         | int(11)    | YES  |     | NULL    |       |
+| date       | date       | YES  |     | NULL    |       |
+| rooster_no | bigint(20) | YES  |     | NULL    |       |
+| hen_no     | bigint(20) | YES  |     | NULL    |       |
+| chicks_no  | bigint(20) | YES  |     | NULL    |       |
++------------+------------+------+-----+---------+-------+
+5 rows in set (0.01 sec)
